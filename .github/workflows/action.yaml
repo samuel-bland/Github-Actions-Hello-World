@@ -1,8 +1,11 @@
-name: Hello World
+
+name: Hello world via runner! 
+
 on: push
+
 jobs:
   init:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
-      - name: Run hello world to console
-    run: echo Hello World!
+      - run: echo 'hello world'
+      - run: echo $HOSTNAME 
